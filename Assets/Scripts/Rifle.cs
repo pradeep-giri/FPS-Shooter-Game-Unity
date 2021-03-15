@@ -14,7 +14,13 @@ public class Rifle : MonoBehaviour
     public GameObject impectEffect;
 
     private float nextTimeToFire = 0f;
-    
+    private AudioSource fireSound;
+
+    private void Start()
+    {
+        fireSound = transform.GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         if(Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
@@ -27,6 +33,7 @@ public class Rifle : MonoBehaviour
     void Shoot()
     {
         muzzleFlash.Play();
+        fireSound.Play();
 
         RaycastHit hit;
 
