@@ -664,6 +664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 754917254}
   - component: {fileID: 754917255}
+  - component: {fileID: 754917256}
   m_Layer: 0
   m_Name: WeaponSwitching
   m_TagString: Untagged
@@ -700,6 +701,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9739aa1f517ccb74aa7d8f20e220a853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedWeapon: 0
+--- !u!95 &754917256
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754917253}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c55ba93fd3b64cc479dae1e48ae4abde, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &907647021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1261,6 +1282,9 @@ MonoBehaviour:
   muzzleFlash: {fileID: 550542125}
   impectEffect: {fileID: 6341145370739358693, guid: d9be2ecbada88494292d07c4c8158bb3,
     type: 3}
+  animator: {fileID: 754917256}
+  maxAmmo: 10
+  reloadTime: 0.5
 --- !u!82 &1308915161
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1460,6 +1484,9 @@ MonoBehaviour:
   muzzleFlash: {fileID: 907647022}
   impectEffect: {fileID: 6341145370739358693, guid: d9be2ecbada88494292d07c4c8158bb3,
     type: 3}
+  animator: {fileID: 754917256}
+  maxAmmo: 5
+  reloadTime: 1
 --- !u!82 &1756170408
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1653,6 +1680,9 @@ MonoBehaviour:
   muzzleFlash: {fileID: 1094905162}
   impectEffect: {fileID: 6341145370739358693, guid: d9be2ecbada88494292d07c4c8158bb3,
     type: 3}
+  animator: {fileID: 754917256}
+  maxAmmo: 3
+  reloadTime: 2
 --- !u!82 &1885272575
 AudioSource:
   m_ObjectHideFlags: 0
